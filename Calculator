@@ -1,0 +1,43 @@
+<html>
+<body>
+<!--Your code goes here-->
+<h3>Addition</h3>
+<form action="addition.php" method="GET">
+First Number: <input type="number" name="add_one"><br>
+Second Number: <input type="number" name="add_two"><br>
+<button type="submit">Add</button><br>
+<br>
+<br>
+<h3>Division</h3>
+<form action="division.php" method="GET">
+Numerator: <input type="number" name="div_num"><br>
+Denominator: <input type="number" name="div_den"><br>
+<button type="submit">Divide</button><br>
+</form>
+<a href="index.php">Reset</a>
+<?=print_r($GET)?>
+<br>
+<?=$_GET['add_one']+$_GET['add_two']?>
+</body>
+</html>
+
+
+<!--addition.php-->
+<html>
+<body>
+<!--Your code goes here-->
+<?="The sum of ${_GET['add_one']} and ${_GET['add_two']} is:"?>
+<h4><?=$_GET['add_one']+$_GET['add_two']?></h4>
+<a href="index.php">Reset</a>
+</body>
+</html>
+
+<!--division.php-->
+<html>
+<body>
+<!--Your code goes here-->
+<?="${_GET['div_num']} divided by ${_GET['div_den']} is:"?>
+<h4><?=$_GET['div_num']/$_GET['div_den']?></h4>
+<a href="index.php">Reset</a>
+</body>
+</html>
