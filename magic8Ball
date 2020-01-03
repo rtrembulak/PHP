@@ -1,10 +1,10 @@
 <?php
   
 function magic8Ball(){
-  echo "Ask a yes of no question?\n";
+  echo "Ask a yes or no question?\n";
 $question = readline(">> ");
   $choice = rand(0,19);
-echo "\nLet's see... You asked $question... \nMy crystal ball is telling me that the answer to this question is: ";
+echo "\nLet's see... You asked $question... \nMy crystal ball is telling me that the answer to this question is: \n";
 switch ($choice) {
   case 0:
     echo "It is certain.\n";
